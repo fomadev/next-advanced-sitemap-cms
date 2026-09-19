@@ -1,0 +1,56 @@
+{
+  "name": "@fomadev/next-advanced-sitemap-cms",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Official headless CMS adapters (Strapi, Contentful, Sanity, Shopify) for next-advanced-sitemap — map CMS records to SitemapEntry[] without writing a mapping loop by hand.",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": { "types": "./dist/index.d.ts", "default": "./dist/index.js" },
+      "require": { "types": "./dist/index.d.cts", "default": "./dist/index.cjs" }
+    },
+    "./strapi": {
+      "import": { "types": "./dist/strapi.d.ts", "default": "./dist/strapi.js" },
+      "require": { "types": "./dist/strapi.d.cts", "default": "./dist/strapi.cjs" }
+    },
+    "./contentful": {
+      "import": { "types": "./dist/contentful.d.ts", "default": "./dist/contentful.js" },
+      "require": { "types": "./dist/contentful.d.cts", "default": "./dist/contentful.cjs" }
+    },
+    "./sanity": {
+      "import": { "types": "./dist/sanity.d.ts", "default": "./dist/sanity.js" },
+      "require": { "types": "./dist/sanity.d.cts", "default": "./dist/sanity.cjs" }
+    },
+    "./shopify": {
+      "import": { "types": "./dist/shopify.d.ts", "default": "./dist/shopify.js" },
+      "require": { "types": "./dist/shopify.d.cts", "default": "./dist/shopify.cjs" }
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "test": "vitest run",
+    "prepublishOnly": "npm run test && npm run build"
+  },
+  "keywords": ["nextjs", "sitemap", "seo", "strapi", "contentful", "sanity", "shopify", "cms", "headless-cms"],
+  "author": "fomadev",
+  "license": "FomaDev Public License",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fomadev/next-advanced-sitemap-cms.git"
+  },
+  "homepage": "https://github.com/fomadev/next-advanced-sitemap-cms#readme",
+  "peerDependencies": {
+    "next-advanced-sitemap": ">=2.0.0"
+  },
+  "devDependencies": {
+    "next-advanced-sitemap": "file:../next-advanced-sitemap",
+    "@types/node": "^26.1.0",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.0"
+  }
+}
