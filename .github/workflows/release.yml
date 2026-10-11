@@ -7,7 +7,7 @@ name: Release CMS Package & Publish to NPM
 on:
   push:
     tags:
-      - 'cms-v*' # Se déclenche à chaque push de tag spécifique au CMS (ex: cms-v1.0.0) ou 'v*' universel
+      - 'v*' # Se déclenche à chaque push de tag spécifique au CMS (ex: cms-v1.0.0) ou 'v*' universel
 
 jobs:
   publish-cms:
